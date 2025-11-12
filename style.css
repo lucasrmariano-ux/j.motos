@@ -1,0 +1,258 @@
+/* 1. Estilizando o HEADER */
+header {
+    background-color: #000000;
+    /* Azul Escuro / Cor principal da marca */
+    color: white;
+    padding: 1px 20px;
+    display: flex;
+    /* Permite colocar o H1 e o NAV lado a lado */
+    justify-content: space-between;
+    /* Distribui o logo à esquerda e o menu à direita */
+    align-items:center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para profundidade */
+}
+
+.logo-area {
+    display: flex;
+    /* Permite alinhar a imagem e o H1 lado a lado */
+    align-items: flex-start;
+    /* Alinha a imagem e o H1 verticalmente ao centro */
+}
+
+
+/* Estiliza a imagem da logo */
+.logo-area .logo-img {
+    height: 200px;
+    /* Define a altura da logo (ajuste conforme o seu design) */
+    width: auto;
+    margin-right: 10px;
+    /* Espaçamento entre a logo e o nome da empresa */
+    border-radius: 10%;
+    /* Opcional: para logos circulares */
+}
+
+/* Estilizando o título/logo */
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+/*------------------------------------------------------------------------*/
+
+
+/* --- Seção de Veículos em Destaque --- */
+.featured-cars {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Fundo cinza claro, como no Figma */
+    text-align: center; /* Centraliza o título */
+}
+
+
+.featured-cars h2 {
+    font-size: 2.5em;
+    color: #a71717; /* Cor do título, pode ser a cor principal da marca */
+    margin-bottom: 40px;
+    position: relative; /* Para a linha decorativa */
+}
+
+
+/* Linha decorativa abaixo do título */
+.featured-cars h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff9900; /* Cor de destaque */
+    margin: 15px auto 0; /* Centraliza e adiciona espaço */
+    border-radius: 2px;
+}
+
+
+
+
+/* --- Container dos Cards --- */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os cards */
+    gap: 30px; /* Espaçamento entre os cards */
+    max-width: 1200px; /* Limita a largura máxima do container */
+    margin: 0 auto;
+}
+
+
+/* --- Estilo de Cada Card de Carro --- */
+.car-card {
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem não vaze do card */
+    width: 320px; /* Largura fixa para o card (ajuste se necessário) */
+    display: flex; /* Para flexibilizar o conteúdo interno */
+    flex-direction: column; /* Conteúdo em coluna (imagem, texto, botão) */
+    transition: transform 0.3s ease; /* Efeito suave no hover */
+
+    
+}
+
+
+.car-card:hover {
+    transform: translateY(-5px); /* Leve levantada no hover */
+}
+
+
+.car-image {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-bottom: 1px solid #ffffff;
+}
+
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* 2. Estilizando o NAV (Menu de Navegação) */
+nav ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Coloca os itens do menu na horizontal */
+}
+
+nav li {
+    margin-left:50px;
+    /* Espaçamento entre os itens do menu */
+}
+
+/* 3. Estilizando os Links */
+nav a {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s;
+    /* Adiciona transição suave para o hover */
+}
+
+nav a:hover {
+    color: hsl(0, 72%, 38%);
+    border-bottom: 2px solid hsl(0, 72%, 39%);
+    /* Linha de destaque ao passar o mouse */
+}   
+
+/* Estilo básico para o corpo da página */
+body {
+    font-family:arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff0707;
+}
+/* --- 1. Estilização Geral do Footer (Sem Alteração) --- */
+footer {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 30px 20px 0;
+    border-top: 5px solid #a71717;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+
+.footer-section {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+
+.footer-section h3 {
+    color: #000000;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+
+/* --- 2. Estilização da Coluna de Links e Contato (Ajustada) --- */
+.quick-links ul,
+.social-legal ul { /* Aplicado também aos links legais */
+    list-style: none;
+    padding: 0;
+}
+
+
+.quick-links a,
+.contact-info a,
+.social-links a,
+.social-legal a { /* Todos os links do footer */
+    color: #000000;
+    text-decoration: none;
+    line-height: 1.8;
+    transition: color 0.2s;
+}
+
+
+.quick-links a:hover,
+.contact-info a:hover,
+.social-links a:hover,
+.social-legal a:hover {
+    color: #ce0101;
+}
+
+
+/* Estiliza o texto de contato */
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+
+/* Remove qualquer regra CSS que tenha:
+    .contact-icon
+    .social-icon
+    .footer-section p i
+   para garantir que não haja rastros de ícones.
+*/
+
+
+/* --- 3. Estilização dos Links Sociais (Novo) --- */
+.social-links a {
+    /* Define o espaçamento entre os links */
+    margin: 0 5px;
+    white-space: nowrap;
+
+}
+
+
+
+.legal-title {
+    margin-top: 25px;
+}
+
+
+/* --- 4. Estilização da Linha Inferior (Bottom) (Sem Alteração) --- */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #000000;
+    font-size: 0.8em;
+}
